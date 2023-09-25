@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "ChenNothing",
+  "name": "VideoFree",
   "version": "1.0.0",
   "action": {
     "default_title": "选择解析地址",   
