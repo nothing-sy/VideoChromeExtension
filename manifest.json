@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "ChenNothing",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "选择解析地址",   
+    "default_popup": "popup.html" 
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
