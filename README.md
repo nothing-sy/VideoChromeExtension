@@ -13,6 +13,6 @@ Enjoy yourself!
 
 ## Preview
 
-![图片](./img.png)
+![图片](./img.png?/raw=true)
 
 
