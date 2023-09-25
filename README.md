@@ -11,4 +11,8 @@ Chrome extension, Video for free!
 
 Enjoy yourself!
 
+## Preview
+
+![图片](./img.png)
+
 
