@@ -1,36 +1,129 @@
 // 解析列表
 const analysisUrlList = [
-  "https://jx.aidouer.net/?url=",
-  "https://okjx.cc/?url=",
-  "https://im1907.top/?jx=",
-  "https://www.nxflv.com/?url=",
-  "https://www.yemu.xyz/?url=",
-  "https://jx.xmflv.com/?url=",
-  "https://jx.yangtu.top/?url=",
-  "https://jx.m3u8.tv/jiexi/?url=",
-  "https://jx.blbo.cc=>4433/?url=",
-  "https://jx.jsonplayer.com/player/?url=",
-  "https://jx.blbo.cc=>4433/?url=",
-  "https://jx.nnxv.cn/tv.php?url=",
-  "https://api.qianqi.net/vip/?url=",
-  "https://123.1dior.cn/?url=",
-  "https://www.ckplayer.vip/jiexi/?url=",
-  "https://www.ckmov.vip/api.php?url=",
-  "https://jx.playerjy.com/?url=",
-  "https://ckmov.ccyjjd.com/ckmov/?url=",
-  "https://www.ckmov.com/?url=",
-  "https://www.h8jx.com/jiexi.php?url=",
-  "https://vip.bljiex.com/?v=",
-  "https://api.jiexi.la/?url=",
-  "https://jiexi.janan.net/jiexi/?url=",
-  "https://www.mtosz.com/m3u8.php?url=",
-  "https://www.pangujiexi.cc/jiexi.php?url=",
-  "https://go.yh0523.cn/y.cy?url=",
-  "https://www.1717yun.com/jx/ty.php?url=",
-  "https://jx.4kdv.com/?url=",
-  "https://www.8090g.cn/?url=",
-  "https://jx.000180.top/jx/?url=",
-  "https://www.administratorw.com/video.php?url="
+  {
+      "url": "https://jx.aidouer.net/?url=",
+      "name": "爱豆"
+  },
+  {
+      "url": "https://okjx.cc/?url=",
+      "name": "OK解析"
+  },
+  {
+      "url": "https://im1907.top/?jx=",
+      "name": "纯净/B站"
+  },
+  {
+      "url": "https://www.nxflv.com/?url=",
+      "name": "诺讯"
+  },
+  {
+      "url": "https://www.yemu.xyz/?url=",
+      "name": "夜幕"
+  },
+  {
+      "url": "https://jx.xmflv.com/?url=",
+      "name": "虾米"
+  },
+  {
+      "url": "https://jx.yangtu.top/?url=",
+      "name": "yangtu"
+  },
+  {
+      "url": "https://jx.m3u8.tv/jiexi/?url=",
+      "name": "M3U8.TV"
+  },
+  {
+      "url": "https://jx.blbo.cc=>4433/?url=",
+      "name": "人人迷"
+  },
+  {
+      "url": "https://jx.jsonplayer.com/player/?url=",
+      "name": "综合/B站"
+  },
+  {
+      "url": "https://jx.blbo.cc=>4433/?url=",
+      "name": "全民"
+  },
+  {
+      "url": "https://jx.nnxv.cn/tv.php?url=",
+      "name": "七哥"
+  },
+  {
+      "url": "https://api.qianqi.net/vip/?url=",
+      "name": "冰豆"
+  },
+  {
+      "url": "https://123.1dior.cn/?url=",
+      "name": "迪奥"
+  },
+  {
+      "url": "https://www.ckplayer.vip/jiexi/?url=",
+      "name": "CK"
+  },
+  {
+      "url": "https://www.ckmov.vip/api.php?url=",
+      "name": "ckmov"
+  },
+  {
+      "url": "https://jx.playerjy.com/?url=",
+      "name": "playerjy/B站"
+  },
+  {
+      "url": "https://ckmov.ccyjjd.com/ckmov/?url=",
+      "name": "ccyjjd"
+  },
+  {
+      "url": "https://www.ckmov.com/?url=",
+      "name": "诺诺"
+  },
+  {
+      "url": "https://www.h8jx.com/jiexi.php?url=",
+      "name": "H8"
+  },
+  {
+      "url": "https://vip.bljiex.com/?v=",
+      "name": "BL"
+  },
+  {
+      "url": "https://api.jiexi.la/?url=",
+      "name": "解析la"
+  },
+  {
+      "url": "https://jiexi.janan.net/jiexi/?url=",
+      "name": "MUTV"
+  },
+  {
+      "url": "https://www.mtosz.com/m3u8.php?url=",
+      "name": "MAO"
+  },
+  {
+      "url": "https://www.pangujiexi.cc/jiexi.php?url=",
+      "name": "盘古"
+  },
+  {
+      "url": "https://go.yh0523.cn/y.cy?url=",
+      "name": "0523"
+  },
+  {
+      "url": "https://www.1717yun.com/jx/ty.php?url=",
+      "name": "17云"
+  },
+  {
+      "url": "https://jx.4kdv.com/?url=",
+      "name": "4K"
+  },
+  {
+      "url": "https://www.8090g.cn/?url=",
+      "name": "8090"
+  },
+  {
+      "url": "https://jx.000180.top/jx/?url=",
+      "name": "180"
+  },
+  {
+      "url": "https://www.administratorw.com/video.php?url=",
+      "name": "无名"
+  }
 ]
 
 
@@ -38,12 +131,11 @@ const analysisUrlList = [
 window.onload = () => {
 
   const wrapper = document.getElementById('wrapper')
-  wrapper.append(...analysisUrlList.map((url,index) => {
-    const u = url.match(/https:\/\/\S+[^"]/g)[0]
+  wrapper.append(...analysisUrlList.map((item,index) => {
     const el = document.createElement('div')
     el.setAttribute('class', 'item')
-    el.setAttribute('data-url',u)
-    el.innerText = '线路' + index
+    el.setAttribute('data-url',item.url)
+    el.innerText = item.name
     return el
   }))
 
