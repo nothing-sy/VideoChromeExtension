@@ -1,4 +1,39 @@
-const analysisUrlList = ['href="https://jx.aidouer.net/?url="', 'href="https://okjx.cc/?url="', 'href="https://www.nxflv.com/?url="', 'href="https://www.yemu.xyz/?url="', 'href="https://jx.xmflv.com/?url="', 'href="https://jx.yangtu.top/?url="', 'href="https://jx.m3u8.tv/jiexi/?url="', 'href="https://jx.blbo.cc=>4433/?url="', 'href="https://jx.jsonplayer.com/player/?url="', 'href="https://jx.blbo.cc=>4433/?url="', 'href="https://jx.nnxv.cn/tv.php?url="', 'href="https://api.qianqi.net/vip/?url="', 'href="https://123.1dior.cn/?url="', 'href="https://www.ckplayer.vip/jiexi/?url="', 'href="https://www.ckmov.vip/api.php?url="', 'href="https://jx.playerjy.com/?url="', 'href="https://ckmov.ccyjjd.com/ckmov/?url="', 'href="https://www.ckmov.com/?url="', 'href="https://www.h8jx.com/jiexi.php?url="', 'href="https://api.jiexi.la/?url="', 'href="https://jiexi.janan.net/jiexi/?url="', 'href="https://www.mtosz.com/m3u8.php?url="', 'href="https://www.pangujiexi.cc/jiexi.php?url="', 'href="https://go.yh0523.cn/y.cy?url="', 'href="https://www.1717yun.com/jx/ty.php?url="', 'href="https://jx.4kdv.com/?url="', 'href="https://www.8090g.cn/?url="', 'href="https://jx.000180.top/jx/?url="', 'href="https://www.administratorw.com/video.php?url="']
+// 解析列表
+const analysisUrlList = [
+  "https://jx.aidouer.net/?url=",
+  "https://okjx.cc/?url=",
+  "https://im1907.top/?jx=",
+  "https://www.nxflv.com/?url=",
+  "https://www.yemu.xyz/?url=",
+  "https://jx.xmflv.com/?url=",
+  "https://jx.yangtu.top/?url=",
+  "https://jx.m3u8.tv/jiexi/?url=",
+  "https://jx.blbo.cc=>4433/?url=",
+  "https://jx.jsonplayer.com/player/?url=",
+  "https://jx.blbo.cc=>4433/?url=",
+  "https://jx.nnxv.cn/tv.php?url=",
+  "https://api.qianqi.net/vip/?url=",
+  "https://123.1dior.cn/?url=",
+  "https://www.ckplayer.vip/jiexi/?url=",
+  "https://www.ckmov.vip/api.php?url=",
+  "https://jx.playerjy.com/?url=",
+  "https://ckmov.ccyjjd.com/ckmov/?url=",
+  "https://www.ckmov.com/?url=",
+  "https://www.h8jx.com/jiexi.php?url=",
+  "https://vip.bljiex.com/?v=",
+  "https://api.jiexi.la/?url=",
+  "https://jiexi.janan.net/jiexi/?url=",
+  "https://www.mtosz.com/m3u8.php?url=",
+  "https://www.pangujiexi.cc/jiexi.php?url=",
+  "https://go.yh0523.cn/y.cy?url=",
+  "https://www.1717yun.com/jx/ty.php?url=",
+  "https://jx.4kdv.com/?url=",
+  "https://www.8090g.cn/?url=",
+  "https://jx.000180.top/jx/?url=",
+  "https://www.administratorw.com/video.php?url="
+]
+
+
 
 window.onload = () => {
 

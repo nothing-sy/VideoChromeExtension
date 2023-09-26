@@ -6,9 +6,6 @@
     "default_title": "选择解析地址",   
     "default_popup": "popup.html" 
   },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self';"
-  },
   "permissions": [
     "tabs"
   ]

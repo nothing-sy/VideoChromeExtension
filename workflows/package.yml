@@ -1,0 +1,38 @@
+name: build Blog for github pages
+on:
+  push:
+    branches:
+    - master
+jobs:
+  publish_blog:
+    name: publish blog
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: build blog
+      shell: bash
+      run: |
+        npm i
+        npm run build
+    - name: upload pages artifact
+      uses: actions/upload-pages-artifact@v1.0.7
+      with:
+        name: github-pages
+        path: .vuepress/dist/
+
+  deploy:
+    needs: publish_blog
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1.2.4
