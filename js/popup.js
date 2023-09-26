@@ -1,6 +1,10 @@
 // 解析列表
 const analysisUrlList = [
   {
+    "url": 'https://jx.777jiexi.com/player/?url=',
+    "name": 'JSON Player'
+  },
+  {
       "url": "https://jx.aidouer.net/?url=",
       "name": "爱豆"
   },
