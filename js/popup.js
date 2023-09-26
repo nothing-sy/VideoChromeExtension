@@ -136,12 +136,6 @@ window.onload = () => {
     el.setAttribute('class', 'item')
     el.setAttribute('data-url',item.url)
     el.innerText = item.name
-    return el
-  }))
-
-  const list = document.querySelectorAll('.item')
-
-  list.forEach(el => {
     el.addEventListener('click', async (e) => {
       const url = e.target.getAttribute('data-url');
         chrome.tabs.query({
@@ -153,6 +147,8 @@ window.onload = () => {
         })
   
     })
-  })
+    return el
+  }))
+
 
 }
