@@ -2,7 +2,7 @@
 Chrome extension, Video for free!
 
 The websites can be parsed :
-
+```js
 // @match        *://*.iqiyi.com/v_*
 // @match        *://v.youku.com/*
 // @match        *://*.le.com/*
@@ -18,7 +18,7 @@ The websites can be parsed :
 // @match        *://v.yinyuetai.com/playlist/*
 // @match        *://*.fun.tv/vplay/*
 // @match        *://*.wasu.cn/Play/show/*
-
+```
 ## Install
 
 1. Download the project as unpackage.
